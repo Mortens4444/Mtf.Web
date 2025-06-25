@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <OutputType>Library</OutputType>
+    <DebugType>full</DebugType>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+    <WarningLevel>9999</WarningLevel>
+    <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DebugSymbols>true</DebugSymbols>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EmbedAllSources>true</EmbedAllSources>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <IncludeSource>true</IncludeSource>
+    <IncludeSymbols>true</IncludeSymbols>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Mtf.Web</PackageId>
+    <Authors>Mortens</Authors>
+    <Company>Mortens</Company>
+    <Description>The `Mtf.Web.WebAPI` layer provides a generic, base implementation for ASP.NET Core controllers and DTO/model conversion.</Description>
+    <PackageReadmeFile>.\ReadMe.md</PackageReadmeFile>
+    <PackageLicenseFile>.\LICENSE.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/Mortens4444/Mtf.Controls.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ApiControllerBase Mortens</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\ReadMe.md" Pack="true" PackagePath="" />
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.3.0" />
+    <PackageReference Include="Mtf.Database" Version="2.0.63" />
+    <PackageReference Include="Mtf.Extensions" Version="1.0.17" />
+    <PackageReference Include="System.Memory" Version="4.6.3" />
+  </ItemGroup>
+
+</Project>
