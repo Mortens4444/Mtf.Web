@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Mtf.Database.Interfaces;
 using Mtf.Web.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Mtf.Web.WebAPI
         where TDto : class
         where TModel : class
         where TKey : class
-        where TRepository : IRepositoryWithKey<TModel, TKey>
+        where TRepository : IRepositoryWithCompositeKey<TModel, TKey>
         where TConverter : IConverter<TModel, TDto>
     {
         protected ILogger Logger { get; }
