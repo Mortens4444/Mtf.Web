@@ -8,7 +8,7 @@ namespace Mtf.Web.WebAPI
 {
     [ApiController]
     [Route("api/[controller]")]
-    public abstract class ApiControllerBaseWithKey<TDto, TModel, TKey, TRepository, TConverter> : ControllerBase
+    public abstract class ApiControllerBaseWithCompositeKey<TDto, TModel, TKey, TRepository, TConverter> : ControllerBase
         where TDto : class
         where TModel : class
         where TKey : class
@@ -19,7 +19,7 @@ namespace Mtf.Web.WebAPI
         protected TRepository Repository { get; }
         protected TConverter Converter { get; }
 
-        protected ApiControllerBaseWithKey(ILogger logger, TRepository repository, TConverter converter)
+        protected ApiControllerBaseWithCompositeKey(ILogger logger, TRepository repository, TConverter converter)
         {
             Logger = logger;
             Repository = repository;
