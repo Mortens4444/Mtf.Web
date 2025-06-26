@@ -8,7 +8,7 @@ namespace LiveView.Web.Services
     /// </summary>
     /// <typeparam name="TModel">The source model type.</typeparam>
     /// <typeparam name="TDto">The target DTO type.</typeparam>
-    public abstract class BaseConverter<TModel, TDto> : IConverter<TModel, TDto>
+    public class BaseConverter<TModel, TDto> : IConverter<TModel, TDto>
         where TModel : class, new()
         where TDto : class, new()
     {
